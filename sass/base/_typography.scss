@@ -1,0 +1,58 @@
+html {
+    font-family: 'Open Sans', sans-serif;
+    text-rendering: optimizeLegibility !important;
+    color:#656c6d ;
+}
+
+body {
+    line-height: 1.4;
+    background-color: var(--color-white);
+}
+
+header{
+    grid-area: header;
+}
+
+nav {
+    grid-area: nav;
+}
+
+#about-me{
+    grid-area: about;
+}
+
+#skills {
+    grid-area: skills;
+}
+
+#portfolio {
+    grid-area: portfolio;
+}
+
+#hobbies {
+    grid-area: hobbies;
+}
+
+#background {
+    grid-area: background;
+}
+
+#contatc {
+    grid-area: contact;
+}
+
+footer {
+    grid-area: footer;
+}
+
+.intro {
+    color: var(--color-white);
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: 500;
+    letter-spacing: -2px;
+    line-height: 1.1;
+    color: inherit;
+}

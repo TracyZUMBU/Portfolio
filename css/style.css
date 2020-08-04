@@ -1,0 +1,109 @@
+:root {
+  --color-primary-bg: #7bc3d1;
+  --color-secondary-bg: #f6f6f6;
+  --color-tertary-bg: #121d1f;
+  --color-white: #fff
+; }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "header" "nav" "about" "skills" "portfolio" "hobbies" "background" "contact" "footer"; }
+
+html {
+  font-family: 'Open Sans', sans-serif;
+  text-rendering: optimizeLegibility !important;
+  color: #656c6d; }
+
+body {
+  line-height: 1.4;
+  background-color: var(--color-white); }
+
+header {
+  grid-area: header; }
+
+nav {
+  grid-area: nav; }
+
+#about-me {
+  grid-area: about; }
+
+#skills {
+  grid-area: skills; }
+
+#portfolio {
+  grid-area: portfolio; }
+
+#hobbies {
+  grid-area: hobbies; }
+
+#background {
+  grid-area: background; }
+
+#contatc {
+  grid-area: contact; }
+
+footer {
+  grid-area: footer; }
+
+.intro {
+  color: var(--color-white); }
+
+h1 {
+  font-size: 4rem;
+  font-weight: 500;
+  letter-spacing: -2px;
+  line-height: 1.1;
+  color: inherit; }
+
+header {
+  background-color: var(--color-primary-bg);
+  position: relative;
+  height: 70rem; }
+
+.intro {
+  position: absolute;
+  top: 57%;
+  left: 33%;
+  transform: translate(-50%, -50%);
+  text-align: left; }
+  .intro span {
+    font-weight: 600; }
+
+header {
+  grid-area: header; }
+
+nav {
+  grid-area: nav; }
+
+#about-me {
+  grid-area: about; }
+
+#skills {
+  grid-area: skills; }
+
+#portfolio {
+  grid-area: portfolio; }
+
+#hobbies {
+  grid-area: hobbies; }
+
+#background {
+  grid-area: background; }
+
+#contatc {
+  grid-area: contact; }
+
+footer {
+  grid-area: footer; }

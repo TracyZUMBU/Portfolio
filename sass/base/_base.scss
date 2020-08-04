@@ -1,0 +1,38 @@
+:root {
+    --color-primary-bg: #7bc3d1;
+    --color-secondary-bg: #f6f6f6;
+    --color-tertary-bg: #121d1f;
+    --color-white: #fff
+}
+
+*,
+*::after,
+*::before {
+    margin:0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    //This defines what 1rem is
+    font-size:62.5%
+    
+}
+
+body {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "header"
+        "nav"
+        "about"
+        "skills"
+        "portfolio"
+        "hobbies"
+        "background"
+        "contact"
+        "footer"
+    ;
+}
+
