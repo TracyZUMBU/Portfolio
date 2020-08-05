@@ -21,6 +21,10 @@ body {
   grid-template-columns: 1fr;
   grid-template-areas: "header" "nav" "about" "skills" "portfolio" "hobbies" "background" "contact" "footer"; }
 
+a {
+  outline: 0;
+  text-decoration: none; }
+
 html {
   font-family: 'Open Sans', sans-serif;
   text-rendering: optimizeLegibility !important;
@@ -61,7 +65,7 @@ footer {
   color: var(--color-white); }
 
 h1 {
-  font-size: 4rem;
+  font-size: 6rem;
   font-weight: 500;
   letter-spacing: -2px;
   line-height: 1.1;
@@ -75,11 +79,29 @@ header {
 .intro {
   position: absolute;
   top: 57%;
-  left: 33%;
+  left: 26%;
   transform: translate(-50%, -50%);
   text-align: left; }
-  .intro span {
+  .intro h1 {
+    margin-top: 2rem;
+    margin-bottom: 3rem; }
+  .intro .name {
     font-weight: 600; }
+  .intro .job_name {
+    font-size: 2.2rem;
+    margin-top: 1rem;
+    margin-bottom: 5rem; }
+  .intro .btn {
+    font-size: 1.8rem;
+    padding: 1.3rem 2.3rem;
+    border: 1px solid var(--color-white);
+    color: var(--color-white); }
+    .intro .btn:hover {
+      border: 1px solid var(--color-tertary-bg);
+      background-color: var(--color-tertary-bg); }
+
+#navbar__container {
+  background-color: var(--color-tertary-bg); }
 
 header {
   grid-area: header; }
