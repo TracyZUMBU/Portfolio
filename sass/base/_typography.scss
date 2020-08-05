@@ -6,7 +6,7 @@ html {
 
 body {
     line-height: 1.4;
-    background-color: var(--color-white);
+    background-color: var(--color-secondary-white-light);
 }
 
 header{
@@ -46,7 +46,7 @@ footer {
 }
 
 .intro {
-    color: var(--color-white);
+    color: var(--color-secondary-white-light);
 }
 
 h1 {
@@ -55,6 +55,15 @@ h1 {
     letter-spacing: -2px;
     line-height: 1.1;
     color: inherit;
+}
+
+h2 {
+    line-height: 2rem;
+    color: #121d1f;
+    font-weight: 400;
+    margin-bottom: 3rem;
+    font-size: 3.4rem;
+    text-transform: capitalize;
 }
 
 

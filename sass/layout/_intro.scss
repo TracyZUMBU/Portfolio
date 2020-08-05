@@ -18,15 +18,4 @@
         margin-bottom: 5rem;
     }
 
-    .btn {
-        font-size: 1.8rem;
-        padding: 1.3rem 2.3rem;
-        border: 1px solid var(--color-white);
-        color: var(--color-white);
-
-        &:hover {
-            border: 1px solid var(--color-tertary-bg);
-            background-color: var(--color-tertary-bg);
-        }
-    }
 }

@@ -1,6 +1,12 @@
+#navbar{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
 .navbar {
-    background-color: var(--color-tertary-bg);
-    color: var(--color-white-text);
+    background-color: var(--color-tertiary-black);
+    color: var(--color-secondary-white-medium);
+    
 }
 
 .nav {
@@ -19,7 +25,7 @@
         }
         &:not(:nth-child(1)):hover{
             transition: .2s ease-in-out;
-            color: var(--color-primary-bg)
+            color: var(--color-primary-blue)
         }
     }
     
