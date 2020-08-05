@@ -2,7 +2,8 @@
     --color-primary-bg: #7bc3d1;
     --color-secondary-bg: #f6f6f6;
     --color-tertary-bg: #121d1f;
-    --color-white: #fff
+    --color-white-text:#f4f5f6;
+    --color-white: #fff;
 }
 
 *,
@@ -38,5 +39,15 @@ body {
 a {
     outline: 0;
     text-decoration: none;
+    color: inherit;
+    display: inline-block;
 }
 
+ul {
+    list-style: none; 
+}
+
+.container {
+    margin-left:25rem;
+    margin-right:25rem ;
+}

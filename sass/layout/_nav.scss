@@ -1,6 +1,32 @@
-#navbar {
-    &__container {
-        background-color: var(--color-tertary-bg);
+.navbar {
+    background-color: var(--color-tertary-bg);
+    color: var(--color-white-text);
+}
 
+.nav {
+    display: flex;
+    font-size: 1.8rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    
+    &__item {
+        font-size: 1.4rem;
+        &:nth-child(1){
+            margin-right: auto;
+        }
+        &:nth-child(1) > a {
+            font-weight: 600;
+        }
+        &:not(:nth-child(1)):hover{
+            transition: .2s ease-in-out;
+            color: var(--color-primary-bg)
+        }
+    }
+    
+    &__link {
+        text-transform: uppercase;
+        padding: 1.5rem;
+        
     }
 }
+
