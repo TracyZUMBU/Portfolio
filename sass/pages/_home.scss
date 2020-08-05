@@ -1,0 +1,35 @@
+header{
+    grid-area: header;
+}
+
+nav {
+    grid-area: nav;
+}
+
+#about-me{
+    grid-area: about;
+}
+
+#skills {
+    grid-area: skills;
+}
+
+#portfolio {
+    grid-area: portfolio;
+}
+
+#hobbies {
+    grid-area: hobbies;
+}
+
+#background {
+    grid-area: background;
+}
+
+#contatc {
+    grid-area: contact;
+}
+
+footer {
+    grid-area: footer;
+}
