@@ -21,8 +21,8 @@ nav {
     grid-area: about;
 }
 
-#skills {
-    grid-area: skills;
+#skill {
+    grid-area: skill;
 }
 
 #portfolio {
@@ -59,11 +59,18 @@ h1 {
 
 h2 {
     line-height: 2rem;
-    color: #121d1f;
     font-weight: 400;
     margin-bottom: 3rem;
     font-size: 3.4rem;
     text-transform: capitalize;
 }
 
+.title {
+    &--black {
+        color: var(--color-tertiary-black);
+    }
+    &--white {
+        color: var(--color-secondary-white-light);
+    }
+}
 
