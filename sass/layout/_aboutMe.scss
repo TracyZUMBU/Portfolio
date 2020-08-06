@@ -29,6 +29,13 @@
         p {
             margin-top: 2rem;
             margin-bottom: 3rem;
+            & :last-child {
+                display: flex;
+            }
         }
+    }
+
+    &__icon {
+        margin-right: 1rem;
     }
 }
