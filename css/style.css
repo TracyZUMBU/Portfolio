@@ -115,18 +115,23 @@ h2 {
   font-size: 1.8rem;
   padding: 1.3rem 2.3rem;
   color: var(--color-secondary-white-light); }
-  .btn--default {
+  .btn--transparent {
     border: 1px solid var(--color-secondary-white-light);
     background-color: transparent; }
-    .btn--default:hover {
+    .btn--transparent:hover {
       border: 1px solid var(--color-tertiary-black);
       background-color: var(--color-tertiary-black); }
-  .btn--primary {
+  .btn--black {
     border: 1px solid var(--color-tertiary-black);
     background-color: var(--color-tertiary-black); }
-    .btn--primary:hover {
+    .btn--black:hover {
       background-color: var(--color-primary-blue);
       border: 1px solid var(--color-primary-blue); }
+  .btn--blue {
+    font-size: 1rem;
+    padding: .6rem 1.4rem;
+    border: 1px solid var(--color-primary-blue);
+    background-color: var(--color-primary-blue); }
 
 .hr {
   height: 4px;
