@@ -20,7 +20,7 @@ body {
   position: relative;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-areas: "header" "nav" "about" "skills" "portfolio" "hobbies" "background" "contact" "footer"; }
+  grid-template-areas: "header" "nav" "about" "skill" "portfolio" "hobbies" "background" "contact" "footer"; }
 
 a {
   outline: 0;
@@ -37,13 +37,17 @@ ul {
 
 section .container {
   display: flex;
-  justify-content: center; }
+  flex-direction: column;
+  align-items: center; }
 
 .title-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 2rem 0 3rem 0; }
+
+section {
+  padding: 10rem 0; }
 
 html {
   font-family: 'Open Sans', sans-serif;
@@ -63,8 +67,8 @@ nav {
 #about-me {
   grid-area: about; }
 
-#skills {
-  grid-area: skills; }
+#skill {
+  grid-area: skill; }
 
 #portfolio {
   grid-area: portfolio; }
@@ -93,11 +97,16 @@ h1 {
 
 h2 {
   line-height: 2rem;
-  color: #121d1f;
   font-weight: 400;
   margin-bottom: 3rem;
   font-size: 3.4rem;
   text-transform: capitalize; }
+
+.title--black {
+  color: var(--color-tertiary-black); }
+
+.title--white {
+  color: var(--color-secondary-white-light); }
 
 .u-background-white {
   background-color: var(--color-secondary-white-dark); }
@@ -128,6 +137,8 @@ h2 {
   display: inline-block; }
   .hr--blue {
     background-color: var(--color-primary-blue); }
+  .hr--white {
+    background-color: rgba(255, 255, 255, 0.3); }
 
 #about-me {
   background-color: var(--color-secondary-white-medium);
@@ -204,6 +215,33 @@ header {
     text-transform: uppercase;
     padding: 1.5rem; }
 
+#skill {
+  background-color: var(--color-primary-blue); }
+
+.skill__container-logo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.skill__box-logo {
+  width: 33.33%;
+  text-align: center; }
+  .skill__box-logo:not(:last-child) {
+    margin-bottom: 2rem; }
+
+.skill__logo {
+  border-radius: 50%;
+  width: 15rem;
+  height: 15rem; }
+
+.skill__name {
+  font-size: 2rem;
+  margin: 1rem 0;
+  text-align: center;
+  line-height: 1.1;
+  color: var(--color-secondary-white-light);
+  font-weight: 600; }
+
 header {
   grid-area: header; }
 
@@ -213,8 +251,8 @@ nav {
 #about-me {
   grid-area: about; }
 
-#skills {
-  grid-area: skills; }
+#skill {
+  grid-area: skill; }
 
 #portfolio {
   grid-area: portfolio; }

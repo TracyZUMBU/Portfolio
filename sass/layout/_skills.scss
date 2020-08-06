@@ -1,0 +1,36 @@
+#skill {
+    background-color: var(--color-primary-blue);
+}
+
+.skill {
+    &__container-logo{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        //border: 2px solid black;
+        
+    }
+    &__box-logo {
+        //border: 1px solid red;
+        width: 33.33%;
+        text-align: center;
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+        
+        
+    }
+    &__logo {
+        border-radius: 50%;
+        width: 15rem;
+        height: 15rem;
+    }
+    &__name {
+         font-size: 2rem;
+         margin: 1rem 0;
+         text-align: center;
+         line-height: 1.1;
+         color: var(--color-secondary-white-light);
+         font-weight: 600;
+    }
+}
