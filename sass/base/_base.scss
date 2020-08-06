@@ -1,9 +1,11 @@
 :root {
-    --color-primary-bg: #7bc3d1;
-    --color-secondary-bg: #f6f6f6;
-    --color-tertary-bg: #121d1f;
-    --color-white-text:#f4f5f6;
-    --color-white: #fff;
+    --color-primary-blue: #7bc3d1;
+
+    --color-secondary-white-light: #fff;
+    --color-secondary-white-medium:#f4f5f6;
+    --color-secondary-white-dark: #f6f6f6;
+
+    --color-tertiary-black: #121d1f;
 }
 
 *,
@@ -22,6 +24,7 @@ html {
 
 body {
     box-sizing: border-box;
+    position: relative;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: 
@@ -48,6 +51,19 @@ ul {
 }
 
 .container {
-    margin-left:25rem;
-    margin-right:25rem ;
+    margin-left:33rem;
+    margin-right:33rem ;
+
+}
+
+section .container {
+    display: flex;
+    justify-content: center;
+}
+
+.title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0 3rem 0;
 }

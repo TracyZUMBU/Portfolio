@@ -1,9 +1,9 @@
 :root {
-  --color-primary-bg: #7bc3d1;
-  --color-secondary-bg: #f6f6f6;
-  --color-tertary-bg: #121d1f;
-  --color-white-text:#f4f5f6;
-  --color-white: #fff; }
+  --color-primary-blue: #7bc3d1;
+  --color-secondary-white-light: #fff;
+  --color-secondary-white-medium:#f4f5f6;
+  --color-secondary-white-dark: #f6f6f6;
+  --color-tertiary-black: #121d1f; }
 
 *,
 *::after,
@@ -17,6 +17,7 @@ html {
 
 body {
   box-sizing: border-box;
+  position: relative;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas: "header" "nav" "about" "skills" "portfolio" "hobbies" "background" "contact" "footer"; }
@@ -31,8 +32,18 @@ ul {
   list-style: none; }
 
 .container {
-  margin-left: 25rem;
-  margin-right: 25rem; }
+  margin-left: 33rem;
+  margin-right: 33rem; }
+
+section .container {
+  display: flex;
+  justify-content: center; }
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0 3rem 0; }
 
 html {
   font-family: 'Open Sans', sans-serif;
@@ -41,7 +52,7 @@ html {
 
 body {
   line-height: 1.4;
-  background-color: var(--color-white); }
+  background-color: var(--color-secondary-white-light); }
 
 header {
   grid-area: header; }
@@ -71,7 +82,7 @@ footer {
   grid-area: footer; }
 
 .intro {
-  color: var(--color-white); }
+  color: var(--color-secondary-white-light); }
 
 h1 {
   font-size: 6rem;
@@ -80,14 +91,81 @@ h1 {
   line-height: 1.1;
   color: inherit; }
 
+h2 {
+  line-height: 2rem;
+  color: #121d1f;
+  font-weight: 400;
+  margin-bottom: 3rem;
+  font-size: 3.4rem;
+  text-transform: capitalize; }
+
+.u-background-white {
+  background-color: var(--color-secondary-white-dark); }
+
+.btn {
+  font-size: 1.8rem;
+  padding: 1.3rem 2.3rem;
+  color: var(--color-secondary-white-light); }
+  .btn--default {
+    border: 1px solid var(--color-secondary-white-light);
+    background-color: transparent; }
+    .btn--default:hover {
+      border: 1px solid var(--color-tertiary-black);
+      background-color: var(--color-tertiary-black); }
+  .btn--primary {
+    border: 1px solid var(--color-tertiary-black);
+    background-color: var(--color-tertiary-black); }
+    .btn--primary:hover {
+      background-color: var(--color-primary-blue);
+      border: 1px solid var(--color-primary-blue); }
+
+.hr {
+  height: 4px;
+  width: 7rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  border: none;
+  display: inline-block; }
+  .hr--blue {
+    background-color: var(--color-primary-blue); }
+
+#about-me {
+  background-color: var(--color-secondary-white-medium);
+  padding: 10rem 0; }
+
+.about__content {
+  width: 59%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.about__photo {
+  border-radius: 50%;
+  height: 20rem;
+  width: 20rem; }
+
+.about__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.4rem; }
+  .about__text p {
+    margin-top: 2rem;
+    margin-bottom: 3rem; }
+    .about__text p :last-child {
+      display: flex; }
+
+.about__icon {
+  margin-right: 1rem; }
+
 header {
-  background-color: var(--color-primary-bg);
+  background-color: var(--color-primary-blue);
   position: relative;
   height: 70rem; }
 
 .intro {
   position: absolute;
-  top: 46%;
+  top: 40%;
   text-align: left; }
   .intro h1 {
     margin-top: 2rem;
@@ -97,19 +175,16 @@ header {
   .intro .job_name {
     font-size: 2.2rem;
     margin-top: 1rem;
-    margin-bottom: 5rem; }
-  .intro .btn {
-    font-size: 1.8rem;
-    padding: 1.3rem 2.3rem;
-    border: 1px solid var(--color-white);
-    color: var(--color-white); }
-    .intro .btn:hover {
-      border: 1px solid var(--color-tertary-bg);
-      background-color: var(--color-tertary-bg); }
+    margin-bottom: 4rem; }
+
+#navbar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0; }
 
 .navbar {
-  background-color: var(--color-tertary-bg);
-  color: var(--color-white-text); }
+  background-color: var(--color-tertiary-black);
+  color: var(--color-secondary-white-medium); }
 
 .nav {
   display: flex;
@@ -124,7 +199,7 @@ header {
       font-weight: 600; }
     .nav__item:not(:nth-child(1)):hover {
       transition: .2s ease-in-out;
-      color: var(--color-primary-bg); }
+      color: var(--color-primary-blue); }
   .nav__link {
     text-transform: uppercase;
     padding: 1.5rem; }

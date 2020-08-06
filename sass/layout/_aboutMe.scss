@@ -1,4 +1,41 @@
 #about-me{
-    padding: $padding-section 0;
-    background-color: var(--color-white-text);
+    background-color: var(--color-secondary-white-medium);
+    padding: $padding-section;
+
+}
+
+.about{
+    
+    &__content {
+        width: 59%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__photo-box {
+    }
+    
+    &__photo {
+        border-radius: 50%;
+        height: 20rem;
+        width: 20rem;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1.4rem;
+        p {
+            margin-top: 2rem;
+            margin-bottom: 3rem;
+            & :last-child {
+                display: flex;
+            }
+        }
+    }
+
+    &__icon {
+        margin-right: 1rem;
+    }
 }
