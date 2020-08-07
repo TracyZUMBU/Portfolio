@@ -1,0 +1,67 @@
+#background {
+    background-color: var(--color-secondary-white-medium)
+}
+.timeline {
+    position: relative;
+    border:1px solid red;
+    min-height:40rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    &::before {
+        position: absolute;
+        content: "";
+        // these property css make set the line from the top to the bottom
+        top: 0; 
+        bottom: 0;
+        //
+        left: 50%;
+        width: .2rem;
+        transform: translateX(-50%);
+        background-color:var(--color-tertiary-light);
+
+    }
+
+    &__container {
+        display: flex;
+        
+        height: 17rem;
+        width: 40%;
+        &--left{
+            padding: 1rem 3rem 1rem 4rem;
+            text-align: end;
+        }
+        &--right {
+            padding: 1rem 4rem 1rem 4rem;
+            text-align: start;
+            align-self: flex-end;
+        }
+
+    }
+
+    &__content {
+    }
+
+    &__job {
+        color: var(--color-primary-dark);
+    }
+
+    &__date{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        position: absolute;
+        top:0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 15rem;
+        height: 15rem;
+        border-radius: 50%;
+        
+        background-color: var(--color-secondary-white-light);
+
+    }
+}
+
