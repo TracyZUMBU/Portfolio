@@ -1,0 +1,20 @@
+#contact {
+    background-color: var(--color-primary-blue)
+}
+
+.details {
+    display: flex;
+    width: 100%;
+}
+
+.detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 33.33%;
+
+    &__logo {
+        height: 2.5rem;
+    }
+}

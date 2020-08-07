@@ -259,6 +259,22 @@ h3 {
     text-transform: uppercase;
     text-align: center; }
 
+#contact {
+  background-color: var(--color-primary-blue); }
+
+.details {
+  display: flex;
+  width: 100%; }
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 33.33%; }
+  .detail__logo {
+    height: 2.5rem; }
+
 header {
   background-color: var(--color-primary-blue);
   position: relative;
@@ -268,14 +284,16 @@ header {
   background-color: var(--color-primary-blue); }
 
 .hobby {
-  display: flex; }
+  display: flex;
+  width: 100%; }
   .hobby__item {
     text-align: center;
-    margin-right: 2rem; }
+    margin-right: 2rem;
+    width: 25%; }
   .hobby__logo {
     margin-bottom: 1.5rem;
     width: 100%;
-    height: 10rem; }
+    height: 6rem; }
   .hobby__text {
     font-size: 2rem;
     margin: 1rem 0;
