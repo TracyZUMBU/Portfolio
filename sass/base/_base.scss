@@ -21,7 +21,12 @@
 
 html {
     //This defines what 1rem is
-    font-size:62.5%
+    font-size:62.5%;
+
+    @include respond(phone) {
+        font-size: 45%;
+    }
+
     
 }
 
@@ -56,6 +61,11 @@ ul {
 .container {
     margin-left:$margin-section-big;
     margin-right:$margin-section-big ;
+    @include respond(phone) {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0 2rem;
+    }
 
 }
 
@@ -74,6 +84,9 @@ section .container {
 
 section {
     padding: 10rem 0;
+    @include respond(phone){
+        padding: 8rem 0;       
+    }
 }
 
 .box-content {
@@ -81,6 +94,9 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include respond(phone) {
+        width: 100%;
+    }
 }
 
 form {
