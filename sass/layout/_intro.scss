@@ -2,6 +2,14 @@
     position: absolute;
     top: 40%;
     text-align: left;
+    @include respond(phone) {
+        position: relative;
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: center;
+        text-align: center;
+        padding: 10rem 0rem;
+    }
 
     h1 {
         margin-top: 2rem;

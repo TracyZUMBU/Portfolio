@@ -24,15 +24,22 @@
         width: 2px;
         transform: translateX(-50%);
         background-color:#eee;
+        @include respond(phone){
+         position: 0;   
+        }
 
     }
 
     &__container {
         position: relative;
-        display: flex;
         width: 50%;
         height: $H_box-date;
         margin-bottom: 10rem;
+        @include respond(phone){
+            width: 100%;
+            display: flex;
+            justify-content: space-between;   
+        }
         &:last-child{
             margin-bottom: 2rem;
         }
@@ -41,19 +48,31 @@
         &--left{
             padding: 1rem 11.5rem 1rem 4rem;
             text-align: end;
+            @include respond(phone){
+                padding: 0;
+                text-align: start;
+            }
         }
         &--right {
             padding: 1rem 4rem 1rem 11.5rem;
             text-align: start;
             align-self: flex-end;
+            @include respond(phone){
+                padding: 0;
+            }
         }
 
         &--left :last-child,
         &--right :last-child{
             padding-bottom: 0;
         }
-
+ 
     }
+            &__content {
+                @include respond(phone){
+                    padding-left: 3rem;
+                }
+            }
 
 
     &__job {
@@ -76,6 +95,15 @@
         width: 15rem;
         height: $H_box-date;
         background-color: var(--color-secondary-white-light);
+        @include respond(phone){
+            transform: translate(0);
+            position: initial;
+            height: 0;
+            width: 16rem;
+            height: 9rem; 
+            order: -1;  
+        }
+
         &--right {
             left: 0;
         }        
@@ -88,6 +116,10 @@
         line-height: 2.6rem;
         text-transform: uppercase;
         text-align: center;
+        @include respond(phone){
+            font-size: 1.3rem;
+            line-height: 1;   
+        }
    
     }
 }

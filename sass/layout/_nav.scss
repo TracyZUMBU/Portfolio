@@ -15,18 +15,44 @@
     font-size: 1.8rem;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
-    
+    @include respond(phone) {
+        flex-direction: column;
+     }
+   
+    &__name {
+        font-weight: 600;
+        font-size: 1.4rem;
+        @include respond(phone) {
+            display: flex; 
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+         }
+        
+        & > i.fas {
+            display: none;
+            @include respond(phone) {
+               display: block; 
+               font-size: 2rem;
+               color: var(--color-secondary-white-dark);
+            }
+        }
+    }
+    &__items {
+        display: flex;
+        @include respond(phone) {
+            flex-direction: column; 
+         }
+    } 
+
     &__item {
         font-size: 1.4rem;
-        &:nth-child(1){
-            margin-right: auto;
-        }
-        &:nth-child(1) > a {
-            font-weight: 600;
-        }
-        &:not(:nth-child(1)):hover{
+        &:hover{
             transition: .2s ease-in-out;
             color: var(--color-primary-blue)
+        }
+        @include respond(phone) {
+            display: none;
         }
     }
     
@@ -36,4 +62,5 @@
         
     }
 }
+
 

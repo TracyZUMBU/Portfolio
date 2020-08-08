@@ -3,4 +3,7 @@ header {
     background-color: var(--color-primary-blue);
     position: relative;
     height: 70rem;
+    @include respond(phone) {
+        height: auto;
+    }
 } 
