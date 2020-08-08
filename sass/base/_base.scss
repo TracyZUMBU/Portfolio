@@ -7,6 +7,7 @@
     --color-secondary-white-dark: #f6f6f6;
 
     --color-tertiary-light:#656c6d;
+    --color-tertiary-medium:#2c3e50;
     --color-tertiary-black: #121d1f;
 }
 
@@ -73,4 +74,24 @@ section .container {
 
 section {
     padding: 10rem 0;
+}
+
+.box-content {
+    width: 59%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    padding: 3rem 0;
+}
+
+input,
+textarea {
+    &:focus,
+    &:active {
+        outline:none;
+
+    }
 }
