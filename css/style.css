@@ -610,7 +610,6 @@ header {
     width: calc(25% - 2rem);
     min-width: 24rem;
     height: 25rem;
-    overflow: hidden;
     position: relative;
     z-index: 1; }
     @media only screen and (max-width: 47em) {
@@ -628,7 +627,10 @@ header {
       top: 0;
       z-index: 2;
       color: var(--color-secondary-white-light);
-      background: rgba(0, 0, 0, 0.66); }
+      background: rgba(0, 0, 0, 0.66);
+      opacity: 1; }
+  .gallery__hover {
+    opacity: 0; }
   .gallery__box-photo {
     width: 100%;
     height: inherit; }
@@ -660,6 +662,28 @@ header {
   font-size: 1rem; }
   .link-project:not(:last-child) {
     margin-bottom: .8rem; }
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; }
+  .tooltip:hover .tooltip__text {
+    visibility: visible; }
+  .tooltip__text {
+    visibility: hidden;
+    width: 13rem;
+    background-color: black;
+    color: var(--color-primary-blue);
+    text-align: center;
+    border-radius: 6px;
+    padding: .5rem .8rem;
+    position: absolute;
+    z-index: 1;
+    bottom: -4%;
+    right: -18%;
+    margin-left: -60px;
+    z-index: 20;
+    font-size: 1.2rem; }
 
 #skill {
   background-color: var(--color-primary-blue); }

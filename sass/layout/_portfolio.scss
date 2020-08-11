@@ -49,7 +49,6 @@
         width: calc(25% - 2rem);
         min-width: 24rem;
         height: 25rem;
-        overflow: hidden;
         position: relative;
         z-index: 1;
         @include respond(phone){
@@ -69,8 +68,12 @@
             z-index: 2;
             color: var(--color-secondary-white-light);
             background: rgba(0, 0, 0, 0.66);
-        } 
+            opacity: 1;
+        }
     }
+    &__hover{
+        opacity: 0;
+    } 
 
     &__box-photo {
         width: 100%;
@@ -111,5 +114,31 @@
     font-size: 1rem;
     &:not(:last-child) {
     margin-bottom: .8rem;
+    }
+} 
+
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+    &:hover .tooltip__text {
+        visibility: visible;
+    }
+    &__text {
+        visibility: hidden;
+        width: 13rem;
+        background-color: black;
+        color: var(--color-primary-blue);
+        text-align: center;
+        border-radius: 6px;
+        padding: .5rem .8rem;
+        position: absolute;
+        z-index: 1;
+        bottom: -4%;
+        right: -18%;
+        margin-left: -60px;
+        z-index: 20;
+        font-size: 1.2rem;
     }
 }
