@@ -37,9 +37,6 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 html {
   font-size: 62.5%; }
-  @media only screen and (max-width: 47em) {
-    html {
-      font-size: 45%; } }
 
 body {
   box-sizing: border-box;
@@ -60,7 +57,17 @@ ul {
 .container {
   margin-left: 33rem;
   margin-right: 33rem; }
-  @media only screen and (max-width: 47em) {
+  @media only screen and (max-width: 46em) {
+    .container {
+      margin-left: 0;
+      margin-right: 0;
+      padding: 0 2rem; } }
+  @media only screen and (min-width: 46.1em) and (max-width: 61em) {
+    .container {
+      margin-left: 0;
+      margin-right: 0;
+      padding: 0 2rem; } }
+  @media only screen and (min-width: 61.1em) and (max-width: 80em) {
     .container {
       margin-left: 0;
       margin-right: 0;
@@ -79,7 +86,7 @@ section .container {
 
 section {
   padding: 10rem 0; }
-  @media only screen and (max-width: 47em) {
+  @media only screen and (max-width: 46em) {
     section {
       padding: 8rem 0; } }
 
@@ -88,9 +95,15 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center; }
-  @media only screen and (max-width: 47em) {
+  @media only screen and (max-width: 46em) {
     .box-content {
       width: 100%; } }
+  @media only screen and (min-width: 46.1em) and (max-width: 61em) {
+    .box-content {
+      width: 80%; } }
+  @media only screen and (min-width: 61.1em) and (max-width: 80em) {
+    .box-content {
+      width: 80%; } }
 
 form {
   padding: 3rem 0; }
@@ -164,7 +177,7 @@ h3 {
   font-weight: 400;
   margin-bottom: 1rem;
   line-height: 1.1; }
-  @media only screen and (max-width: 47em) {
+  @media only screen and (max-width: 46em) {
     h3 {
       font-size: 2rem; } }
 
@@ -262,7 +275,7 @@ h3 {
     width: 2px;
     transform: translateX(-50%);
     background-color: #eee; }
-    @media only screen and (max-width: 47em) {
+    @media only screen and (max-width: 46em) {
       .timeline::before {
         position: 0; } }
   .timeline__container {
@@ -270,7 +283,7 @@ h3 {
     width: 50%;
     height: 15rem;
     margin-bottom: 10rem; }
-    @media only screen and (max-width: 47em) {
+    @media only screen and (max-width: 46em) {
       .timeline__container {
         width: 100%;
         display: flex;
@@ -280,7 +293,7 @@ h3 {
     .timeline__container--left {
       padding: 1rem 11.5rem 1rem 4rem;
       text-align: end; }
-      @media only screen and (max-width: 47em) {
+      @media only screen and (max-width: 46em) {
         .timeline__container--left {
           padding: 0;
           text-align: start; } }
@@ -288,15 +301,17 @@ h3 {
       padding: 1rem 4rem 1rem 11.5rem;
       text-align: start;
       align-self: flex-end; }
-      @media only screen and (max-width: 47em) {
+      @media only screen and (max-width: 46em) {
         .timeline__container--right {
           padding: 0; } }
     .timeline__container--left :last-child,
     .timeline__container--right :last-child {
       padding-bottom: 0; }
-  @media only screen and (max-width: 47em) {
+  @media only screen and (max-width: 46em) {
     .timeline__content {
       padding-left: 3rem; } }
+  .timeline__description {
+    font-size: 1.4rem; }
   .timeline__job {
     color: var(--color-primary-dark);
     font-weight: 500; }
@@ -315,7 +330,7 @@ h3 {
     width: 15rem;
     height: 15rem;
     background-color: var(--color-secondary-white-light); }
-    @media only screen and (max-width: 47em) {
+    @media only screen and (max-width: 46em) {
       .timeline__box-date {
         transform: translate(0);
         position: initial;
@@ -332,7 +347,7 @@ h3 {
     line-height: 2.6rem;
     text-transform: uppercase;
     text-align: center; }
-    @media only screen and (max-width: 47em) {
+    @media only screen and (max-width: 46em) {
       .timeline__date {
         font-size: 1.3rem;
         line-height: 1; } }
@@ -343,7 +358,7 @@ h3 {
 .contact__details {
   display: flex;
   width: 100%; }
-  @media only screen and (max-width: 47em) {
+  @media only screen and (max-width: 46em) {
     .contact__details {
       flex-direction: column;
       align-items: center; } }
@@ -354,14 +369,14 @@ h3 {
   justify-content: center;
   text-align: center;
   width: 33.33%; }
-  @media only screen and (max-width: 47em) {
+  @media only screen and (max-width: 46em) {
     .contact__detail-item {
       width: 100%; } }
 
 .contact__logo {
   height: 3rem;
   margin-bottom: 1rem; }
-  @media only screen and (max-width: 47em) {
+  @media only screen and (max-width: 46em) {
     .contact__logo {
       height: 5rem; } }
 
@@ -372,7 +387,7 @@ h3 {
   text-align: center;
   font-size: 1.4rem;
   line-height: 1.4; }
-  @media only screen and (max-width: 47em) {
+  @media only screen and (max-width: 46em) {
     .contact__text {
       font-size: 2rem; } }
   .contact__text span {
@@ -396,7 +411,7 @@ h3 {
 .contact__input {
   width: 100%;
   display: flex; }
-  @media only screen and (max-width: 47em) {
+  @media only screen and (max-width: 46em) {
     .contact__input {
       flex-direction: column; } }
 
@@ -405,7 +420,7 @@ h3 {
   margin-top: 2.5rem;
   margin-bottom: 4rem; }
 
-@media only screen and (max-width: 47em) {
+@media only screen and (max-width: 46em) {
   #email {
     margin-top: 2.5rem; } }
 
@@ -417,17 +432,17 @@ h3 {
     display: flex;
     justify-content: center;
     gap: 6rem; }
-    @media only screen and (max-width: 47em) {
+    @media only screen and (max-width: 46em) {
       .social-media__list {
         gap: 0; } }
-    @media only screen and (max-width: 47em) {
+    @media only screen and (max-width: 46em) {
       .social-media__list > li {
         width: 50%;
         text-align: center; } }
   .social-media i.fab {
     color: var(--color-secondary-white-light);
     font-size: 3rem; }
-    @media only screen and (max-width: 47em) {
+    @media only screen and (max-width: 46em) {
       .social-media i.fab {
         font-size: 4rem; } }
     .social-media i.fab:hover {
@@ -452,7 +467,7 @@ input {
   height: 3.4rem; }
   input:first-child {
     margin-right: 2rem; }
-    @media only screen and (max-width: 47em) {
+    @media only screen and (max-width: 46em) {
       input:first-child {
         margin-right: 0; } }
 
@@ -464,7 +479,7 @@ header {
   background-color: var(--color-primary-blue);
   position: relative;
   height: 70rem; }
-  @media only screen and (max-width: 47em) {
+  @media only screen and (max-width: 46em) {
     header {
       height: auto; } }
 
@@ -474,14 +489,14 @@ header {
 .hobby {
   display: flex;
   width: 100%; }
-  @media only screen and (max-width: 47em) {
+  @media only screen and (max-width: 46em) {
     .hobby {
       flex-direction: column; } }
   .hobby__item {
     text-align: center;
     margin-right: 2rem;
     width: 25%; }
-    @media only screen and (max-width: 47em) {
+    @media only screen and (max-width: 46em) {
       .hobby__item {
         width: 100%;
         margin-right: 0;
@@ -490,7 +505,7 @@ header {
     margin-bottom: 1.5rem;
     width: 100%;
     height: 6rem; }
-    @media only screen and (max-width: 47em) {
+    @media only screen and (max-width: 46em) {
       .hobby__logo {
         height: 7rem; } }
   .hobby__text {
@@ -503,7 +518,7 @@ header {
   position: absolute;
   top: 40%;
   text-align: left; }
-  @media only screen and (max-width: 47em) {
+  @media only screen and (max-width: 46em) {
     .intro {
       position: relative;
       text-align: center;
@@ -533,13 +548,14 @@ header {
   font-size: 1.8rem;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem; }
-  @media only screen and (max-width: 47em) {
+  @media only screen and (max-width: 46em) {
     .nav {
       flex-direction: column; } }
   .nav__name {
     font-weight: 600;
-    font-size: 1.4rem; }
-    @media only screen and (max-width: 47em) {
+    font-size: 1.4rem;
+    margin-right: auto; }
+    @media only screen and (max-width: 46em) {
       .nav__name {
         display: flex;
         align-items: center;
@@ -547,14 +563,14 @@ header {
         width: 100%; } }
     .nav__name > i.fas {
       display: none; }
-      @media only screen and (max-width: 47em) {
+      @media only screen and (max-width: 46em) {
         .nav__name > i.fas {
           display: block;
           font-size: 2rem;
           color: var(--color-secondary-white-dark); } }
   .nav__items {
     display: flex; }
-    @media only screen and (max-width: 47em) {
+    @media only screen and (max-width: 46em) {
       .nav__items {
         flex-direction: column; } }
   .nav__item {
@@ -562,7 +578,7 @@ header {
     .nav__item:hover {
       transition: .2s ease-in-out;
       color: var(--color-primary-blue); }
-    @media only screen and (max-width: 47em) {
+    @media only screen and (max-width: 46em) {
       .nav__item {
         display: none; } }
   .nav__link {
@@ -574,30 +590,26 @@ header {
 
 .portfolio__list-categories {
   display: flex; }
-  @media only screen and (max-width: 47em) {
+  @media only screen and (max-width: 46em) {
     .portfolio__list-categories {
       flex-direction: column;
       align-items: stretch; } }
 
 .portfolio__cat:not(:first-child) {
   margin-left: 2rem; }
-  @media only screen and (max-width: 47em) {
+  @media only screen and (max-width: 46em) {
     .portfolio__cat:not(:first-child) {
       margin-left: 0; } }
 
 .portfolio__cat > a {
   width: 100%; }
-  @media only screen and (max-width: 47em) {
+  @media only screen and (max-width: 46em) {
     .portfolio__cat > a {
       font-size: 2rem; } }
 
-.portfolio__cat > a.active {
-  border: 1px solid var(--color-tertiary-black);
-  background-color: var(--color-tertiary-black); }
-
 .portfolio__filter {
   margin-bottom: 3rem; }
-  @media only screen and (max-width: 47em) {
+  @media only screen and (max-width: 46em) {
     .portfolio__filter {
       width: 100%; } }
 
@@ -605,18 +617,23 @@ header {
   display: flex;
   gap: 2rem;
   flex-wrap: wrap; }
+  @media only screen and (min-width: 61.1em) and (max-width: 80em) {
+    .gallery {
+      justify-content: center; } }
   .gallery__item {
     width: calc(25% - 2rem);
     min-width: 24rem;
     height: 25rem;
-    overflow: hidden;
     position: relative;
     z-index: 1; }
-    @media only screen and (max-width: 47em) {
+    @media only screen and (max-width: 46em) {
       .gallery__item {
         width: 100%;
         min-width: 100%;
         margin-bottom: 2rem; } }
+    @media only screen and (min-width: 46.1em) and (max-width: 61em) {
+      .gallery__item {
+        width: calc(50% - 2rem); } }
     .gallery__item:hover {
       transform: scale(1.1);
       transition: .5s all;
@@ -627,7 +644,10 @@ header {
       top: 0;
       z-index: 2;
       color: var(--color-secondary-white-light);
-      background: rgba(0, 0, 0, 0.66); }
+      background: rgba(0, 0, 0, 0.66);
+      opacity: 1; }
+  .gallery__hover {
+    opacity: 0; }
   .gallery__box-photo {
     width: 100%;
     height: inherit; }
@@ -642,7 +662,7 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center; }
-    @media only screen and (max-width: 47em) {
+    @media only screen and (max-width: 46em) {
       .gallery__hover {
         display: none; } }
 
@@ -660,6 +680,32 @@ header {
   .link-project:not(:last-child) {
     margin-bottom: .8rem; }
 
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; }
+  .tooltip:hover .tooltip__text {
+    visibility: visible; }
+  .tooltip__text {
+    visibility: hidden;
+    width: 13rem;
+    background-color: black;
+    color: var(--color-primary-blue);
+    text-align: center;
+    border-radius: 6px;
+    padding: .5rem .8rem;
+    position: absolute;
+    z-index: 1;
+    bottom: -4%;
+    right: -18%;
+    margin-left: -60px;
+    z-index: 20;
+    font-size: 1.2rem; }
+
+.active > a {
+  border: 1px solid var(--color-tertiary-black);
+  background-color: var(--color-tertiary-black); }
+
 #skill {
   background-color: var(--color-primary-blue); }
 
@@ -673,7 +719,7 @@ header {
   text-align: center; }
   .skill__box-logo:not(:last-child) {
     margin-bottom: 2rem; }
-  @media only screen and (max-width: 47em) {
+  @media only screen and (max-width: 46em) {
     .skill__box-logo {
       width: 100%; } }
 
@@ -681,7 +727,7 @@ header {
   border-radius: 50%;
   width: 15rem;
   height: 15rem; }
-  @media only screen and (max-width: 47em) {
+  @media only screen and (max-width: 46em) {
     .skill__logo {
       width: 23rem;
       height: 23rem; } }

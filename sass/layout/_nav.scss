@@ -22,6 +22,7 @@
     &__name {
         font-weight: 600;
         font-size: 1.4rem;
+        margin-right: auto; 
         @include respond(phone) {
             display: flex; 
             align-items: center;
