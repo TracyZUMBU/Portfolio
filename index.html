@@ -3,20 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link rel="stylesheet" href="css/font-awesome/css/fontawesome.css">
     <link rel="stylesheet" href="css/font-awesome/css/brands.css">
     <link rel="stylesheet" href="css/font-awesome/css/solid.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    
+  
     <title>Tracy ZUMBU | Développeuse Web</title>
-</head>
 
+</head>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script>
+    $(document).ready(function(){
+        $(".btn").click(function(){
+            var name = $(this).attr("data-filter");
+            if(name == "all"){
+                $(".gallery__item").show("2000");
+            }
+            else{
+                $(".gallery__item").not("."+name).hide("2000");
+                $(".gallery__item").filter("."+name).show("2000")
+            }
+        })
+    })
+</script>
 <body>
 
     <header id="header">
         <div class="container">
             <div class="intro">
                 <h1>
-                    Hello, I'm
+                    Hello, Moi c'est
                     <span class="name">Tracy Zumbu</span>
                 </h1>
                 <p class="job_name">Apprentie Intégratrice & Développeuse Front End</p>
@@ -59,7 +77,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo nibh.</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo nibh.</p>
                     <p>
-                        <a href="" class="btn btn--black ">
+                        <a href="./cv-tracyzumbu.pdf" download class="btn btn--black ">
                             <img src="./img/download-icon.svg" alt="icon of downloading" class="about__icon">
                             Download Resume
                         </a>
@@ -122,27 +140,27 @@
             <div class="portfolio__filter">
                 <ul class="portfolio__list-categories">
                     <li class="portfolio__cat">
-                        <a href="" class="btn btn--blue active">Tout</a>
+                        <a data-filter="all" class="btn btn--blue active">Tout</a>
                     </li>
                     <li class="portfolio__cat">
-                        <a href="" class="btn btn--blue">HTML / CSS</a>
+                        <a data-filter="css" class="btn btn--blue">HTML / CSS</a>
                     </li>
                     <li class="portfolio__cat">
-                        <a href="" class="btn btn--blue">Javascript</a>
+                        <a data-filter="javascript" class="btn btn--blue">Javascript</a>
                     </li>
                     <li class="portfolio__cat">
-                        <a href="" class="btn btn--blue">React</a>
+                        <a data-filter="react" class="btn btn--blue">React</a>
                     </li>
                     <li class="portfolio__cat">
-                        <a href="" class="btn btn--blue">Node</a>
+                        <a data-filter="node" class="btn btn--blue">Node</a>
                     </li>
                     <li class="portfolio__cat">
-                        <a href="" class="btn btn--blue">Base de données</a>
+                        <a data-filter="database" class="btn btn--blue">Base de données</a>
                     </li>
                 </ul>
             </div>
             <div class="gallery">
-                <div class="gallery__item">
+                <div class="gallery__item css">
                     <div class="gallery__box-photo">
                         <img src="./img//website-img/outdoors.png" alt="" class="gallery__photo">
                     </div>
@@ -152,7 +170,7 @@
                         <a href="https://voyagetours.netlify.app" target="blank" class="link-project">Site web</a>
                     </div>
                 </div>
-                <div class="gallery__item">
+                <div class="gallery__item css">
                     <div class="gallery__box-photo">
                         <img src="./img//website-img/booking-hotel.png" alt="" class="gallery__photo">
                     </div>
@@ -162,7 +180,7 @@
                         <a href="https://bookinghotel.netlify.app/" class="link-project" target="blank">Site web</a>
                     </div>
                 </div>
-                <div class="gallery__item">
+                <div class="gallery__item node database react">
                     <div class="gallery__box-photo">
                         <img src="./img//website-img/ETB.png" alt="" class="gallery__photo">
                     </div>
@@ -172,7 +190,7 @@
                         <a href="" target="blank" class="link-project"></a>
                     </div>
                 </div>
-                <div class="gallery__item">
+                <div class="gallery__item react">
                     <div class="gallery__box-photo">
                         <img src="./img//website-img/beach-resort.png" alt="" target="blank" class="gallery__photo">
                     </div>
@@ -182,7 +200,7 @@
                         <a href="" target="blank" class="link-project"></a>
                     </div>
                 </div>
-                <div class="gallery__item">
+                <div class="gallery__item javascript">
                     <div class="gallery__box-photo">
                         <img src="./img/website-img/budgety.png" alt="" target="blank" class="gallery__photo">
                     </div>

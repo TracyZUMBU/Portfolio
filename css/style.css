@@ -538,7 +538,8 @@ header {
       flex-direction: column; } }
   .nav__name {
     font-weight: 600;
-    font-size: 1.4rem; }
+    font-size: 1.4rem;
+    margin-right: auto; }
     @media only screen and (max-width: 47em) {
       .nav__name {
         display: flex;
