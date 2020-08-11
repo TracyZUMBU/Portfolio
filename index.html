@@ -15,6 +15,7 @@
 </head>
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script>
+    // function that filter the categories of the projects
     $(document).ready(function(){
         $(".btn").click(function(){
             var name = $(this).attr("data-filter");
@@ -26,6 +27,12 @@
                 $(".gallery__item").filter("."+name).show("2000")
             }
         })
+    })
+
+    //  function that handle the background color of <ul>
+    $(document).on('click', 'ul li', function(){
+        $(this).addClass("active").siblings().removeClass("active")
+
     })
 </script>
 <body>
@@ -139,8 +146,8 @@
             </div>
             <div class="portfolio__filter">
                 <ul class="portfolio__list-categories">
-                    <li class="portfolio__cat">
-                        <a data-filter="all" class="btn btn--blue active">Tout</a>
+                    <li class="portfolio__cat active">
+                        <a data-filter="all" class="btn btn--blue ">Tout</a>
                     </li>
                     <li class="portfolio__cat">
                         <a data-filter="css" class="btn btn--blue">HTML / CSS</a>

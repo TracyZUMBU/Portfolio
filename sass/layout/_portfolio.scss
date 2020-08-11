@@ -2,6 +2,9 @@
     background-color: var(--color-secondary-white-medium);
 }
 
+
+
+
 .portfolio {
     &__list-categories {
         display: flex;
@@ -31,6 +34,8 @@
         }
 
     }
+
+ 
 
     &__filter {
         margin-bottom: 3rem;
@@ -142,3 +147,8 @@
         font-size: 1.2rem;
     }
 }
+
+.active > a {
+    border: 1px solid var(--color-tertiary-black);
+    background-color: var(--color-tertiary-black);
+} 
