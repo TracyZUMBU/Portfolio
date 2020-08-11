@@ -68,11 +68,13 @@
         }
  
     }
-            &__content {
-                @include respond(phone){
-                    padding-left: 3rem;
-                }
-            }
+    &__content {
+        @include respond(phone){
+            padding-left: 3rem;
+        }
+    }&__description {
+        font-size: 1.4rem;
+    }
 
 
     &__job {
