@@ -1,0 +1,15 @@
+.hr {
+    height: 4px;
+    width: 7rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    border: none;
+    display: inline-block;
+    &--blue{
+        background-color: var(--color-primary-blue);
+        
+    }
+    &--white{
+        background-color: rgba(255,255,255,0.3);
+    }
+}

@@ -1,17 +1,24 @@
 @import "abstracts/functions";
 @import "abstracts/mixins";
-@import "abstracts/functions";
+@import "abstracts/variables";
 
 @import "base/animation";
 @import "base/base";
 @import "base/typography";
 @import "base/utilities";
 
-//@import "components";
+@import "components/button";
+@import "components/hr"; 
 
+@import "layout/aboutMe";
+@import "layout/background";
+@import "layout/contact";
+@import "layout/footer";
 @import "layout/header";
+@import "layout/hobbies";
 @import "layout/intro";
 @import "layout/nav";
+@import "layout/portfolio";
+@import "layout/skills"; 
 
-@import "pages/home";
-
+@import "pages/home";           

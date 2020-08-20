@@ -3,47 +3,517 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="css/font-awesome/css/fontawesome.css">
+    <link rel="stylesheet" href="css/font-awesome/css/brands.css">
+    <link rel="stylesheet" href="css/font-awesome/css/solid.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    
+  
     <title>Tracy ZUMBU | Développeuse Web</title>
+
 </head>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+<script>
+    // function that filter the categories of the projects
+    $(document).ready(function(){
+        $(".btn").click(function(){
+            var name = $(this).attr("data-filter");
+            if(name == "all"){
+                $(".gallery__item").show("2000");
+            }
+            else{
+                $(".gallery__item").not("."+name).hide("2000");
+                $(".gallery__item").filter("."+name).show("2000")
+            }
+        })
+    })
+
+    //  function that handle the background color of <ul> categorie__list
+    $(document).on('click', 'ul li', function(){
+        $(this).addClass("active").siblings().removeClass("active")
+
+    })
+</script>
 <body>
 
     <header id="header">
         <div class="container">
-
             <div class="intro">
                 <h1>
-                    Hello, I'm
+                    Hello, Moi c'est
                     <span class="name">Tracy Zumbu</span>
                 </h1>
-                    <p class="job_name">Apprentie Intégratrice & Développeuse Front End</p>
-                    <a href="#about" class="btn">Learn More</a>
+                <p class="job_name">Apprentie Développeuse Web React / Node.js</p>
+                <a href="#about-me" class="btn btn--transparent">Learn More</a>
             </div>
         </div>
     </header>
 
-    
     <nav id="navbar">
-        <div class="navbar__container">
-            hhh
+        <div class="navbar">
+            <div class="container">
+                <ul class="nav">
+                    <div class="nav__name">
+                        <li class=""> <a href="#header" class="nav__link">Tracy Zumbu</a></li>
+                        <i class="fas fa-bars"></i>
+                    </div>
+                    <div class="nav__items">
+                        <li class="nav__item"><a href="#about-me" class="nav__link">A propos</a></li>
+                        <li class="nav__item"><a href="#skill" class="nav__link">Compétences</a></li>
+                        <li class="nav__item"><a href="#portfolio" class="nav__link">portfolio</a></li>
+                        <li class="nav__item"><a href="#background" class="nav__link">Parcours</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">contact</a></li>
+                    </div>
+                </ul>
+            </div>
         </div>
     </nav>
    
-
     <section id="about-me">
+        <div class="container">
+            <div class="box-content">
+                <div class="title-container">
+                    <h2 class="title title--black">A propos de moi</h2>
+                    <hr class="hr hr--blue">
+                </div>
+                <div class="about__photo-box">
+                    <img src="./img/me.jpg" alt="photo of tracy" class="about__photo">
+                </div>
+                <div class="about__text">
+                    <p>Issue d'études en cosmétologie, je me suis rapidement rendu compte au cours de mes différentes expériences que c'était un domaine qui ne me correspondait pas. Donc, après l'obtention de mon BTS cosmétologie, j'ai décidé d'entrer dans le monde du travail. J'ai ainsi occupée plusieurs postes comme entre autres : vendeuse, employé de restauration, etc. En somme, des jobs alimentaires mais qui cependant, m'ont appris les sens des responsabilités, la polyvalence, ou encore à être pro-active.</p>
+                    <p>C'est à la suite d'une initiation aux métiers du numérique que née en moi un réel intérêt pour le métier de développeur web. 
+                    Je commence alors à suivre des tutos sur youtubes, des cours sur openclassrooms et Udemy. Ce qui me conforte dans l'idée que j'ai trouvé ma voie. Je prend donc la décision de suivre une formation intensive de développeur web et mobile pour acquérir les bases nécessaires avant de reprendre mes études.</p>
+                    <p>Cette formation a définitivement fini de me convaincre. C'est ainsi qu'aujourd'hui, je poursuivre mes études en Licence professionnelle Concepteur et Développeur d'Application Web en alternance (en contrat d'apprentissage 3 semaines entreprise / 1 semaine école)
+                    </p>
+                    <p>
+                    <a href="./cv-tracyzumbu.pdf" download class="btn btn--black ">
+                        <img src="./img/download-icon.svg" alt="icon of downloading" class="about__icon">
+                        Télécharger CV
+                    </a>
+                </p>
+                </div>
+            </div>
+        </div>
+        </section>
 
+    <section id="skill">
+        <div class="container">
+            <div class="title-container">
+                <h2 class="title title--white">Compétences</h2>
+                <hr class="hr hr--white">
+            </div>
+            <div class="skill__container-logo">
+                <div class="skill__box-logo">
+                    <img src="./img/js-icon.png" alt="logo of javascript" class="skill__logo">
+                    <h4 class="skill__name">Javascript</h4>
+                </div>
+                <div class="skill__box-logo">
+                    <img src="./img/html-icon.png" alt="logo of javascript" class="skill__logo">
+                    <h4 class="skill__name">HTML 5</h4>
+                </div>
+                <div class="skill__box-logo">
+                    <img src="./img/css-icon.png" alt="logo of javascript" class="skill__logo">
+                    <h4 class="skill__name">CSS 3</h4>
+                </div>
+                <div class="skill__box-logo">
+                    <img src="./img/sass-icon.png" alt="logo of javascript" class="skill__logo">
+                    <h4 class="skill__name">Sass</h4>
+                </div>
+                <div class="skill__box-logo">
+                    <img src="./img/react-icon.png" alt="logo of javascript" class="skill__logo">
+                    <h4 class="skill__name">React</h4>
+                </div>
+                <div class="skill__box-logo">
+                    <img src="./img/node-icon.png" alt="logo of javascript" class="skill__logo">
+                    <h4 class="skill__name">Node</h4>
+                </div>
+                <div class="skill__box-logo">
+                    <img src="./img/mysql-icon.png" alt="logo of javascript" class="skill__logo">
+                    <h4 class="skill__name">Mysql</h4>
+                </div>
+                <div class="skill__box-logo">
+                    <img src="./img/github-icon.png" alt="logo of javascript" class="skill__logo">
+                    <h4 class="skill__name">Github</h4>
+                </div>
+            </div>
+        </div>
+        
     </section>
-    <section id="skills">
 
-    </section>
     <section id="portfolio">
-
+        <div class="container">
+            <div class="title-container">
+                <h2 class="title title--black">portfolio</h2>
+                <hr class="hr hr--blue">
+            </div>
+            <div class="portfolio__filter">
+                <ul class="portfolio__list-categories">
+                    <li class="portfolio__cat active">
+                        <a data-filter="all" class="btn btn--blue ">Tout</a>
+                    </li>
+                    <li class="portfolio__cat">
+                        <a data-filter="css" class="btn btn--blue">HTML / CSS</a>
+                    </li>
+                    <li class="portfolio__cat">
+                        <a data-filter="javascript" class="btn btn--blue">Javascript</a>
+                    </li>
+                    <li class="portfolio__cat">
+                        <a data-filter="react" class="btn btn--blue">React</a>
+                    </li>
+                    <li class="portfolio__cat">
+                        <a data-filter="node" class="btn btn--blue">Node</a>
+                    </li>
+                    <li class="portfolio__cat">
+                        <a data-filter="database" class="btn btn--blue">Base de données</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="gallery">
+                <div class="gallery__item css">
+                    <div class="gallery__box-photo">
+                        <img src="./img//website-img/outdoors.png" alt="" class="gallery__photo">
+                    </div>
+                    <div class="gallery__hover">
+                        <p class="name-project">OUTDOORS</p>
+                        <a href="https://github.com/TracyZUMBU/OnTheRoad" target="blank" class="link-project">github</a>
+                        <a href="https://voyagetours.netlify.app" target="blank" class="link-project">Site web</a>
+                    </div>
+                </div>
+                <div class="gallery__item css">
+                    <div class="gallery__box-photo">
+                        <img src="./img//website-img/booking-hotel.png" alt="" class="gallery__photo">
+                    </div>
+                    <div class="gallery__hover">
+                        <p class="name-project">Booking Hotel</p>
+                        <a href="https://github.com/TracyZUMBU/hotel_project" target="blank"  class="link-project">github</a>
+                        <a href="https://bookinghotel.netlify.app/" class="link-project" target="blank">Site web</a>
+                    </div>
+                </div>
+                <div class="gallery__item node database react tooltip">
+                    <div class="gallery__box-photo">
+                        <img src="./img//website-img/ETB.png" alt="" class="gallery__photo">
+                    </div>
+                    <div class="gallery__hover">
+                        <p class="name-project">Eduque Ta beaute</p>
+                        <a href="https://github.com/TracyZUMBU/Eduque_ta_beaute" target="blank" class="link-project">github</a>
+                        <a href="" target="blank" class="link-project"></a>
+                    </div>
+                    <p class="tooltip__text">projet en cours de développement</p>
+                </div>
+                <div class="gallery__item react tooltip">
+                    <div class="gallery__box-photo">
+                        <img src="./img//website-img/beach-resort.png" alt="" target="blank" class="gallery__photo">
+                    </div>
+                    <div class="gallery__hover">
+                        <p class="name-project">Beach Resort</p>
+                        <a href="https://github.com/TracyZUMBU/resort" target="blank" class="link-project">github</a>
+                        <a href="https://beach-resort-palace.netlify.app/" target="blank" class="link-project">site web</a>
+                    </div>
+                </div>
+                <div class="gallery__item javascript">
+                    <div class="gallery__box-photo">
+                        <img src="./img/website-img/budgety.png" alt="" target="blank" class="gallery__photo">
+                    </div>
+                    <div class="gallery__hover">
+                        <p class="name-project">Budgety</p>
+                        <a href="https://github.com/TracyZUMBU/budgety" target="blank" class="link-project">github</a>
+                        <a href="https://budgetappmanager.netlify.app/" target="blank" class="link-project">Site web</a>
+                    </div>
+                </div>
+                <div class="gallery__item css tooltip">
+                    <div class="gallery__box-photo">
+                        <img src="./img/website-img/portfolio.png" alt="" target="blank" class="gallery__photo">
+                    </div>
+                    <div class="gallery__hover">
+                        <p class="name-project">Portfolio</p>
+                        <a href="https://github.com/TracyZUMBU/portfolio" target="blank" class="link-project">github</a>
+                    </div>
+                    <p class="tooltip__text">projet en cours de développement</p>
+                </div>
+            </div>
+        </div>
     </section>
+
     <section id="hobbies">
+        <div class="container">
+            <div class="title-container">
+                <h2 class="title title--white">Hobbies</h2>
+                <hr class="hr hr--white">
+            </div>
+            <div class="hobby">
+                <div class="hobby__item">
+                    <svg class="hobby__logo">
+                        <use xlink:href="img/icon/sprite.svg#icon-airplane"></use>
+                    </svg>
+                    <p class="hobby__text">Aventurière, j'ai visité  4 contients, 27 pays, 50 villes</p>
+                </div>
+                <div class="hobby__item">
+                    <svg class="hobby__logo">
+                        <use xlink:href="img/icon/sprite.svg#icon-book"></use>
+                    </svg>
+                    <p class="hobby__text">Curieuse, j'ai plaisir à découvrir de nouvelles choses  </p>
+                </div>
+                <div class="hobby__item">
+                    <svg class="hobby__logo">
+                        <use xlink:href="img/icon/sprite.svg#icon-basketball"></use>
+                    </svg>
+                    <p class="hobby__text">Compétitive dans l'âme,je ne recule devant aucun challenge</p>
+                </div>
+                <div class="hobby__item">
+                    <svg class="hobby__logo">
+                        <use xlink:href="img/icon/sprite.svg#icon-sphere"></use>
+                    </svg>
+                    <p class="hobby__text">Passionée par le numérique</p>
+                </div>
+            </div>
+        </div>
 
     </section>
-    <section id="background"></section>
-    <section id="contact"></section>
-    <footer></footer>
+
+    <section id="background">
+        <div class="container">
+            <div class="experiences-section">
+                <div class="title-container">
+                    <h2 class="title title--black">Expérience</h2>
+                    <hr class="hr hr--blue">
+                </div>
+                <ul class="timeline">
+                    <li class="timeline__container timeline__container--left">
+                        <div class="timeline__content">
+                            <h3 class="timeline__compagny">Dioka</h>
+                            <h3 class="timeline__job">Assistante développeuse web</h3>
+                            <p class="timeline__description">
+                                > intergration de l'interface user / administrateur
+                                <p class="timeline__description"> > Conception de fonctionnalités : réservation, blog</p>
+                                <p class="timeline__description"> > Conception et administration de la base de données, API REST</p>
+                            </p>
+                        </div>
+                        <div class="timeline__box-date">
+                            <h3 class="timeline__date">
+                               2020
+                            </h3>
+                        </div>
+                    </li>
+                    <li class="timeline__container timeline__container--right">
+                        <div class="timeline__content">
+                            <h3 class="timeline__compagny">Innovorder</h2>
+                            <h3 class="timeline__job">Chargée de déploiement</h3>
+                            <p class="timeline__description"> > Migration de données</p>
+                            <p class="timeline__description">> Installation de logiciels</p>
+                            <p class="timeline__description">> Suivi client post-déploiement</p>
+                        </div>
+                        <div class="timeline__box-date timeline__box-date--right">
+                            <h3 class="timeline__date timeline__date--right">
+                                2019
+                                <br>
+                                - 
+                                <br>
+                                2020
+                            </h3>
+                        </div>
+                    </li>
+                    <li class="timeline__container timeline__container--left">
+                        <div class="timeline__content">
+                            <h3 class="timeline__compagny">Séjour Linguistique</h>
+                            <h3 class="timeline__job">Angleterre</h3>
+                            <p class="timeline__description">
+                                > apprentissage de la langue anglaise
+                                <p class="timeline__description"> > Assistante enseignante française</p>
+                                <p class="timeline__description"> > bénévolat British Heart Foundation</p>
+                            </p>
+                        </div>
+                        <div class="timeline__box-date">
+                            <h3 class="timeline__date">
+                                2017
+                                <br>
+                                - 
+                                <br>
+                                2016
+                            </h3>
+                        </div>
+                    </li>
+                    <li class="timeline__container timeline__container--right">
+                        <div class="timeline__content">
+                            <h3 class="timeline__compagny">La cassidaine</h2>
+                            <h3 class="timeline__job">Assistante Community manager</h3>
+                            <p class="timeline__description"> > Animation et modération de réseaux sociaux</p>
+                            <p class="timeline__description">> Mien en place de partenariats</p>
+                            <p class="timeline__description">> Veille concurentielle</p>
+                        </div>
+                        <div class="timeline__box-date timeline__box-date--right">
+                            <h3 class="timeline__date timeline__date--right">
+                               2015
+                            </h3>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="education-section">
+                <div class="title-container">
+                    <h2 class="title title--black">Formation</h2>
+                    <hr class="hr hr--blue">
+                </div>
+                <ul class="timeline">
+                    <li class="timeline__container timeline__container--left">
+                        <div class="timeline__content">
+                            <h3 class="timeline__compagny">Wild code school</h>
+                            <h3 class="timeline__job">Licence pro - Développeur Concepteur d'applications web</h3>
+                            <p class="timeline__description">
+                                Titre RNCP “Concepteur Développeur d’Applications” Bac+4
+                            </p>
+                        </div>
+                        <div class="timeline__box-date">
+                            <h3 class="timeline__date">
+                                2020
+                                <br>
+                                - 
+                                <br>
+                                2021
+                            </h3>
+                        </div>
+                    </li>
+                    <li class="timeline__container timeline__container--right">
+                        <div class="timeline__content">
+                            <h3 class="timeline__compagny">wild code schol</h2>
+                            <h3 class="timeline__job">Assistante développeuse web</h3>
+                            <p class="timeline__description"> Titre RNCP Développeur Web et Web Mobile - BAC +2</p>
+                        </div>
+                        <div class="timeline__box-date timeline__box-date--right">
+                            <h3 class="timeline__date timeline__date--right">
+                                2019
+                                <br>
+                                - 
+                                <br>
+                                2020
+                            </h3>
+                        </div>
+                    </li>
+                    <li class="timeline__container timeline__container--left">
+                        <div class="timeline__content">
+                            <h3 class="timeline__compagny">Elisa Lemonnier</h>
+                            <h3 class="timeline__job">BTS cosmétologie</h3>
+                            <p class="timeline__description">
+                              Mention bien
+                            </p>
+                        </div>
+                        <div class="timeline__box-date">
+                            <h3 class="timeline__date">
+                                2015
+                            </h3>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+
+            <div class="title-container">
+                <h2 class="title title--white">contact</h2>
+                <hr class="hr hr--white">
+            </div>
+            <div class="box-content">
+                <div class="contact__details">
+                    <div class="contact__detail-item">
+                        <svg class="contact__logo">
+                            <use xlink:href="img/icon/sprite.svg#icon-location-pin"></use>
+                        </svg>
+                        <p class="contact__text">
+                            <span>64 rue des haies</span>
+                            <span>75020 Paris</span>
+                        </p>
+                    </div>
+                    <div class="contact__detail-item">
+                        <svg class="contact__logo">
+                            <use xlink:href="img/icon/sprite.svg#icon-mail"></use>
+                        </svg>
+                        <p class="contact__text">
+                           tracyzumbu@lilo.org
+                        </p>
+                    </div>
+                    <div class="contact__detail-item">
+                        <svg class="contact__logo">
+                            <use xlink:href="img/icon/sprite.svg#icon-phone"></use>
+                        </svg>
+                        <p class="contact__text">
+                           06.49.46.54.90
+                        </p>
+                    </div>
+                </div>
+                <div class="contact__message">
+                    <h4 class="contact__heading">
+                        Envoyez-moi un message
+                    </h4>
+    
+                    <form 
+                        id="contactForm"
+                        action="" 
+                        class="contact__form"
+                        name="sentMessage">
+    
+                        <div class="contact__input">
+                            <input 
+                                type="text" 
+                                id="name" 
+                                class="contact__name" 
+                                required="required"     placeholder="Name">
+                            <input 
+                                type="email" 
+                                id="email" 
+                                class="contact__email" 
+                                required="required"     placeholder="Email">
+                        </div>
+                        <div class="contact__textarea">
+                            <textarea
+                                name="message" 
+                                id="message" 
+                                rows="4" 
+                                placeholder="Message" 
+                                required="required">
+                            </textarea>
+                        </div>
+                        <button class="btn btn--transparent">
+                            Envoyer
+                        </button>
+                    
+    
+                    </form>
+                </div>
+            </div>
+            <div class="social-media">
+                <ul class="social-media__list">
+                    <li>
+                        <a href="www.tracy-zumbu.fr"  class="social-media__link">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/TracyZGarcia" class="social-media__link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/TracyZUMBU" class="social-media__link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/tracy-zumbu-45158a151/" class="social-media__link">
+                            <i class="fab fa-dribbble"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p class="footer__text">Expired by TemplateWire</p>
+    </footer>
+
 </body>
 </html>

@@ -1,9 +1,15 @@
 .intro {
     position: absolute;
-    top: 57%;
-    left: 26%;
-    transform: translate(-50%, -50%);
+    top: 40%;
     text-align: left;
+    @include respond(phone) {
+        position: relative;
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: center;
+        text-align: center;
+        padding: 10rem 0rem;
+    }
 
     h1 {
         margin-top: 2rem;
@@ -17,18 +23,7 @@
     .job_name {
         font-size: 2.2rem;
         margin-top: 1rem;
-        margin-bottom: 5rem;
+        margin-bottom: 4rem;
     }
 
-    .btn {
-        font-size: 1.8rem;
-        padding: 1.3rem 2.3rem;
-        border: 1px solid var(--color-white);
-        color: var(--color-white);
-
-        &:hover {
-            border: 1px solid var(--color-tertary-bg);
-            background-color: var(--color-tertary-bg);
-        }
-    }
 }
