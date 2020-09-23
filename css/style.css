@@ -633,7 +633,6 @@ header {
       gap: 3rem;
       width: 100%; } }
   .gallery__item {
-    width: calc(25% - 2rem);
     min-width: 24rem;
     height: 25rem;
     position: relative;
