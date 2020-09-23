@@ -7,6 +7,7 @@
     &__details {
         display: flex;
         width: 100%;
+        justify-content: center;
         @include respond(phone){
             flex-direction: column;
             align-items: center;   
@@ -57,7 +58,7 @@
   
     &__message,
     &__form {
-        width: 100%;
+        width: max-content;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -144,3 +145,4 @@ input {
         }
     }
 }
+
