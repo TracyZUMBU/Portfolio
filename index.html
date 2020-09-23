@@ -30,11 +30,40 @@
         })
     })
 
-    //  function that handle the background color of <ul> categorie__list
+    // function that handle the background color of <ul> categorie__list
     $(document).on('click', 'ul li', function(){
         $(this).addClass("active").siblings().removeClass("active")
-
     })
+
+    // function that close the dropdown menu when clicking on a nav's item
+    $(document).on('click', 'ul li', function(){
+        $('.nav__items li').toggle()
+    })
+
+    // function that toggle navbar's list
+    $(document).on('click', '.fas', function(){
+        $('.nav__items li').toggle()
+    })
+
+    // function that show "gallery_hover" class
+    
+    // if ($(window).width() < 1199){
+    //     console.log('blajj');
+    // }
+   
+    // $(document).on('click', '.gallery__item', function(){
+    //     $(this).parent().find('.gallery__hover').css({
+    //         "position": "absolute",
+    //         "transition": ".5s all",
+    //         "top": "0",
+    //         "z-index": "2",
+    //         "color": "var(--color-secondary-white-light)",
+    //         "background": "rgba(0, 0, 0, 0.66)",
+    //         "opacity": "1" 
+    //     })
+    //     console.log('bla')
+    // })
+
 </script>
 <body>
 
@@ -442,7 +471,7 @@
             </div>
             <div class="box-content">
                 <div class="contact__details">
-                    <div class="contact__detail-item">
+                    <!-- <div class="contact__detail-item">
                         <svg class="contact__logo">
                             <use xlink:href="img/icon/sprite.svg#icon-location-pin"></use>
                         </svg>
@@ -450,7 +479,7 @@
                             <span>64 rue des haies</span>
                             <span>75020 Paris</span>
                         </p>
-                    </div>
+                    </div> -->
                     <div class="contact__detail-item">
                         <svg class="contact__logo">
                             <use xlink:href="img/icon/sprite.svg#icon-mail"></use>
