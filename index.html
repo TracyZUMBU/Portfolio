@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <link rel="stylesheet" href="css/font-awesome/css/fontawesome.css">
     <link rel="stylesheet" href="css/font-awesome/css/brands.css">
     <link rel="stylesheet" href="css/font-awesome/css/solid.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    
-  
+
+
     <title>Tracy ZUMBU | Développeuse Web</title>
 
 </head>
@@ -17,40 +18,57 @@
 
 <script>
     // function that filter the categories of the projects
-    $(document).ready(function(){
-        $(".btn").click(function(){
+    $(document).ready(function () {
+        $(".btn").click(function () {
             var name = $(this).attr("data-filter");
-            if(name == "all"){
+            if (name == "all") {
                 $(".gallery__item").show("2000");
             }
-            else{
-                $(".gallery__item").not("."+name).hide("2000");
-                $(".gallery__item").filter("."+name).show("2000")
+            else {
+                $(".gallery__item").not("." + name).hide("2000");
+                $(".gallery__item").filter("." + name).show("2000")
             }
         })
     })
 
     // function that handle the background color of <ul> categorie__list
-    $(document).on('click', 'ul li', function(){
+    $(document).on('click', 'ul li', function () {
         $(this).addClass("active").siblings().removeClass("active")
     })
 
-    // // function that close the dropdown menu when clicking on a nav's item
-    // $(document).on('click', 'ul li', function(){
-    //     $('.nav__items li').toggle()
-    // })
+    // function that close the dropdown menu when clicking on a nav's item
+    $(document).ready(function () {
+        $(document).on('click', 'ul li.nav__items', function () {
+            if (window.innerWidth < 750) {
+                console.log('mobile');
+                $('.nav__items li').toggle()
+            } else {
+                $('.nav__items li').show()
+            }
+        })
+    })
 
-    // // function that toggle navbar's list
-    // $(document).on('click', '.fas', function(){
-    //     $('.nav__items li').toggle()
-    // })
+
+
+    // function that toggle navbar's list
+    $(document).ready(function () {
+        $(document).on('click', '.fas', function () {
+            if (window.innerWidth < 750) {
+
+                $('.nav__items li').toggle()
+            } else {
+
+                $('.nav__items li').show()
+            }
+        })
+    })
 
     // function that show "gallery_hover" class
-    
+
     // if ($(window).width() < 1199){
     //     console.log('blajj');
     // }
-   
+
     // $(document).on('click', '.gallery__item', function(){
     //     $(this).parent().find('.gallery__hover').css({
     //         "position": "absolute",
@@ -65,6 +83,7 @@
     // })
 
 </script>
+
 <body>
 
     <header id="header">
@@ -99,7 +118,7 @@
             </div>
         </div>
     </nav>
-   
+
     <section id="about-me">
         <div class="container">
             <div class="box-content">
@@ -111,21 +130,32 @@
                     <img src="./img/me.jpg" alt="photo of tracy" class="about__photo">
                 </div>
                 <div class="about__text">
-                    <p>Issue d'études en cosmétologie, je me suis rapidement rendu compte au cours de mes différentes expériences que c'était un domaine qui ne me correspondait pas. Donc, après l'obtention de mon BTS cosmétologie, j'ai décidé d'entrer dans le monde du travail. J'ai ainsi occupée plusieurs postes comme entre autres : vendeuse, employé de restauration, etc. En somme, des jobs alimentaires mais qui cependant, m'ont appris les sens des responsabilités, la polyvalence, ou encore à être pro-active.</p>
-                    <p>C'est à la suite d'une initiation aux métiers du numérique que née en moi un réel intérêt pour le métier de développeur web. 
-                    Je commence alors à suivre des tutos sur youtubes, des cours sur openclassrooms et Udemy. Ce qui me conforte dans l'idée que j'ai trouvé ma voie. Je prend donc la décision de suivre une formation intensive de développeur web et mobile pour acquérir les bases nécessaires avant de reprendre mes études.</p>
-                    <p>Cette formation a définitivement fini de me convaincre. C'est ainsi qu'aujourd'hui, je poursuivre mes études en Licence professionnelle Concepteur et Développeur d'Application Web en alternance (en contrat d'apprentissage 3 semaines entreprise / 1 semaine école)
+                    <p>Issue d'études en cosmétologie, je me suis rapidement rendu compte au cours de mes différentes
+                        expériences que c'était un domaine qui ne me correspondait pas. Donc, après l'obtention de mon
+                        BTS cosmétologie, j'ai décidé d'entrer dans le monde du travail. J'ai ainsi occupée plusieurs
+                        postes comme entre autres : vendeuse, employé de restauration, etc. En somme, des jobs
+                        alimentaires mais qui cependant, m'ont appris les sens des responsabilités, la polyvalence, ou
+                        encore à être pro-active.</p>
+                    <p>C'est à la suite d'une initiation aux métiers du numérique que née en moi un réel intérêt pour le
+                        métier de développeur web.
+                        Je commence alors à suivre des tutos sur youtubes, des cours sur openclassrooms et Udemy. Ce qui
+                        me conforte dans l'idée que j'ai trouvé ma voie. Je prend donc la décision de suivre une
+                        formation intensive de développeur web et mobile pour acquérir les bases nécessaires avant de
+                        reprendre mes études.</p>
+                    <p>Cette formation a définitivement fini de me convaincre. C'est ainsi qu'aujourd'hui, je poursuivre
+                        mes études en Licence professionnelle Concepteur et Développeur d'Application Web en alternance
+                        (en contrat d'apprentissage 3 semaines entreprise / 1 semaine école)
                     </p>
                     <p>
-                    <a href="./cv-tracyzumbu.pdf" download class="btn btn--black ">
-                        <img src="./img/download-icon.svg" alt="icon of downloading" class="about__icon">
-                        Télécharger CV
-                    </a>
-                </p>
+                        <a href="./cv-tracyzumbu.pdf" download class="btn btn--black ">
+                            <img src="./img/download-icon.svg" alt="icon of downloading" class="about__icon">
+                            Télécharger CV
+                        </a>
+                    </p>
                 </div>
             </div>
         </div>
-        </section>
+    </section>
 
     <section id="skill">
         <div class="container">
@@ -168,7 +198,7 @@
                 </div>
             </div>
         </div>
-        
+
     </section>
 
     <section id="portfolio">
@@ -216,7 +246,8 @@
                     </div>
                     <div class="gallery__hover">
                         <p class="name-project">Booking Hotel</p>
-                        <a href="https://github.com/TracyZUMBU/hotel_project" target="blank"  class="link-project">github</a>
+                        <a href="https://github.com/TracyZUMBU/hotel_project" target="blank"
+                            class="link-project">github</a>
                         <a href="https://bookinghotel.netlify.app/" class="link-project" target="blank">Site web</a>
                     </div>
                 </div>
@@ -226,7 +257,8 @@
                     </div>
                     <div class="gallery__hover">
                         <p class="name-project">Eduque Ta beaute</p>
-                        <a href="https://github.com/TracyZUMBU/Eduque_ta_beaute" target="blank" class="link-project">github</a>
+                        <a href="https://github.com/TracyZUMBU/Eduque_ta_beaute" target="blank"
+                            class="link-project">github</a>
                         <a href="" target="blank" class="link-project"></a>
                     </div>
                     <p class="tooltip__text">projet en cours de développement</p>
@@ -238,7 +270,8 @@
                     <div class="gallery__hover">
                         <p class="name-project">Beach Resort</p>
                         <a href="https://github.com/TracyZUMBU/resort" target="blank" class="link-project">github</a>
-                        <a href="https://beach-resort-palace.netlify.app/" target="blank" class="link-project">site web</a>
+                        <a href="https://beach-resort-palace.netlify.app/" target="blank" class="link-project">site
+                            web</a>
                     </div>
                 </div>
                 <div class="gallery__item javascript">
@@ -276,13 +309,13 @@
                     <svg class="hobby__logo">
                         <use xlink:href="img/icon/sprite.svg#icon-airplane"></use>
                     </svg>
-                    <p class="hobby__text">Aventurière, j'ai visité  4 contients, 27 pays, 50 villes</p>
+                    <p class="hobby__text">Aventurière, j'ai visité 4 contients, 27 pays, 50 villes</p>
                 </div>
                 <div class="hobby__item">
                     <svg class="hobby__logo">
                         <use xlink:href="img/icon/sprite.svg#icon-book"></use>
                     </svg>
-                    <p class="hobby__text">Curieuse, j'ai plaisir à découvrir de nouvelles choses  </p>
+                    <p class="hobby__text">Curieuse, j'ai plaisir à découvrir de nouvelles choses </p>
                 </div>
                 <div class="hobby__item">
                     <svg class="hobby__logo">
@@ -313,17 +346,17 @@
                     <li class="timeline__container timeline__container--right">
                         <div class="timeline__content">
                             <h3 class="timeline__compagny">Deloitte / ACOSS (Programme PimpMyApp)</h>
-                            <h3 class="timeline__job">développeuse web junior</h3>
-                            <p class="timeline__description">
-                                > Design sprint
+                                <h3 class="timeline__job">développeuse web junior</h3>
+                                <p class="timeline__description">
+                                    > Design sprint
                                 <p class="timeline__description"> > Création de prototype </p>
-                            </p>
+                                </p>
                         </div>
                         <div class="timeline__box-date timeline__box-date--right">
                             <h3 class="timeline__date timeline__date--right">
                                 AOUT 20
                                 <br>
-                                - 
+                                -
                                 <br>
                                 SETP 20
                             </h3>
@@ -332,18 +365,20 @@
                     <li class="timeline__container timeline__container--left">
                         <div class="timeline__content">
                             <h3 class="timeline__compagny">Dioka</h>
-                            <h3 class="timeline__job">développeuse web junior</h3>
-                            <p class="timeline__description">
-                                > intergration de l'interface user / administrateur
-                                <p class="timeline__description"> > Conception de fonctionnalités : réservation, blog</p>
-                                <p class="timeline__description"> > Conception et administration de la base de données, API REST</p>
-                            </p>
+                                <h3 class="timeline__job">développeuse web junior</h3>
+                                <p class="timeline__description">
+                                    > intergration de l'interface user / administrateur
+                                <p class="timeline__description"> > Conception de fonctionnalités : réservation, blog
+                                </p>
+                                <p class="timeline__description"> > Conception et administration de la base de données,
+                                    API REST</p>
+                                </p>
                         </div>
                         <div class="timeline__box-date">
                             <h3 class="timeline__date">
                                 Mars 2019
                                 <br>
-                                - 
+                                -
                                 <br>
                                 Juin 2019
                             </h3>
@@ -352,16 +387,16 @@
                     <li class="timeline__container timeline__container--right">
                         <div class="timeline__content">
                             <h3 class="timeline__compagny">Innovorder</h2>
-                            <h3 class="timeline__job">Chargée de déploiement</h3>
-                            <p class="timeline__description"> > Migration de données</p>
-                            <p class="timeline__description">> Installation de logiciels</p>
-                            <p class="timeline__description">> Suivi client post-déploiement</p>
+                                <h3 class="timeline__job">Chargée de déploiement</h3>
+                                <p class="timeline__description"> > Migration de données</p>
+                                <p class="timeline__description">> Installation de logiciels</p>
+                                <p class="timeline__description">> Suivi client post-déploiement</p>
                         </div>
                         <div class="timeline__box-date timeline__box-date--right">
                             <h3 class="timeline__date timeline__date--right">
                                 2018
                                 <br>
-                                - 
+                                -
                                 <br>
                                 2017
                             </h3>
@@ -370,18 +405,18 @@
                     <li class="timeline__container timeline__container--left">
                         <div class="timeline__content">
                             <h3 class="timeline__compagny">Séjour Linguistique</h>
-                            <h3 class="timeline__job">Angleterre</h3>
-                            <p class="timeline__description">
-                                > apprentissage de la langue anglaise
+                                <h3 class="timeline__job">Angleterre</h3>
+                                <p class="timeline__description">
+                                    > apprentissage de la langue anglaise
                                 <p class="timeline__description"> > Assistante enseignante française</p>
                                 <p class="timeline__description"> > bénévolat British Heart Foundation</p>
-                            </p>
+                                </p>
                         </div>
                         <div class="timeline__box-date">
                             <h3 class="timeline__date">
                                 2017
                                 <br>
-                                - 
+                                -
                                 <br>
                                 2016
                             </h3>
@@ -390,14 +425,14 @@
                     <li class="timeline__container timeline__container--right">
                         <div class="timeline__content">
                             <h3 class="timeline__compagny">La cassidaine</h2>
-                            <h3 class="timeline__job">Assistante Community manager</h3>
-                            <p class="timeline__description"> > Animation et modération de réseaux sociaux</p>
-                            <p class="timeline__description">> Mien en place de partenariats</p>
-                            <p class="timeline__description">> Veille concurentielle</p>
+                                <h3 class="timeline__job">Assistante Community manager</h3>
+                                <p class="timeline__description"> > Animation et modération de réseaux sociaux</p>
+                                <p class="timeline__description">> Mien en place de partenariats</p>
+                                <p class="timeline__description">> Veille concurentielle</p>
                         </div>
                         <div class="timeline__box-date timeline__box-date--right">
                             <h3 class="timeline__date timeline__date--right">
-                               2015
+                                2015
                             </h3>
                         </div>
                     </li>
@@ -412,16 +447,16 @@
                     <li class="timeline__container timeline__container--left">
                         <div class="timeline__content">
                             <h3 class="timeline__compagny">Wild code school</h>
-                            <h3 class="timeline__job">Licence pro - Développeur Concepteur d'applications web</h3>
-                            <p class="timeline__description">
-                                Titre RNCP “Concepteur Développeur d’Applications” Bac+4
-                            </p>
+                                <h3 class="timeline__job">Licence pro - Développeur Concepteur d'applications web</h3>
+                                <p class="timeline__description">
+                                    Titre RNCP “Concepteur Développeur d’Applications” Bac+4
+                                </p>
                         </div>
                         <div class="timeline__box-date">
                             <h3 class="timeline__date">
                                 2020
                                 <br>
-                                - 
+                                -
                                 <br>
                                 2021
                             </h3>
@@ -430,14 +465,14 @@
                     <li class="timeline__container timeline__container--right">
                         <div class="timeline__content">
                             <h3 class="timeline__compagny">wild code schol</h2>
-                            <h3 class="timeline__job">Assistante développeuse web</h3>
-                            <p class="timeline__description"> Titre RNCP Développeur Web et Web Mobile - BAC +2</p>
+                                <h3 class="timeline__job">Assistante développeuse web</h3>
+                                <p class="timeline__description"> Titre RNCP Développeur Web et Web Mobile - BAC +2</p>
                         </div>
                         <div class="timeline__box-date timeline__box-date--right">
                             <h3 class="timeline__date timeline__date--right">
                                 2019
                                 <br>
-                                - 
+                                -
                                 <br>
                                 2020
                             </h3>
@@ -446,10 +481,10 @@
                     <li class="timeline__container timeline__container--left">
                         <div class="timeline__content">
                             <h3 class="timeline__compagny">Elisa Lemonnier</h>
-                            <h3 class="timeline__job">BTS cosmétologie</h3>
-                            <p class="timeline__description">
-                              Mention bien
-                            </p>
+                                <h3 class="timeline__job">BTS cosmétologie</h3>
+                                <p class="timeline__description">
+                                    Mention bien
+                                </p>
                         </div>
                         <div class="timeline__box-date">
                             <h3 class="timeline__date">
@@ -485,7 +520,7 @@
                             <use xlink:href="img/icon/sprite.svg#icon-mail"></use>
                         </svg>
                         <p class="contact__text">
-                           tracyzumbu@lilo.org
+                            tracyzumbu@lilo.org
                         </p>
                     </div>
                     <div class="contact__detail-item">
@@ -493,7 +528,7 @@
                             <use xlink:href="img/icon/sprite.svg#icon-phone"></use>
                         </svg>
                         <p class="contact__text">
-                           06.49.46.54.90
+                            06.49.46.54.90
                         </p>
                     </div>
                 </div>
@@ -501,46 +536,30 @@
                     <h4 class="contact__heading">
                         Envoyez-moi un message
                     </h4>
-    
-                    <form 
-                        id="contactForm"
-                        action="" 
-                        class="contact__form"
-                        name="sentMessage">
-    
+
+                    <form id="contactForm" action="" class="contact__form" name="sentMessage">
+
                         <div class="contact__input">
-                            <input 
-                                type="text" 
-                                id="name" 
-                                class="contact__name" 
-                                required="required"     placeholder="Name">
-                            <input 
-                                type="email" 
-                                id="email" 
-                                class="contact__email" 
-                                required="required"     placeholder="Email">
+                            <input type="text" id="name" class="contact__name" required="required" placeholder="Name">
+                            <input type="email" id="email" class="contact__email" required="required"
+                                placeholder="Email">
                         </div>
                         <div class="contact__textarea">
-                            <textarea
-                                name="message" 
-                                id="message" 
-                                rows="4" 
-                                placeholder="Message" 
-                                required="required">
+                            <textarea name="message" id="message" rows="4" placeholder="Message" required="required">
                             </textarea>
                         </div>
                         <button class="btn btn--transparent">
                             Envoyer
                         </button>
-                    
-    
+
+
                     </form>
                 </div>
             </div>
             <div class="social-media">
                 <ul class="social-media__list">
                     <li>
-                        <a href="www.tracy-zumbu.fr"  class="social-media__link">
+                        <a href="www.tracy-zumbu.fr" class="social-media__link">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
                     </li>
@@ -569,4 +588,5 @@
     </footer>
 
 </body>
+
 </html>
