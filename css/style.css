@@ -621,7 +621,7 @@ header {
 .gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem; }
+  gap: 2.5rem; }
   @media only screen and (min-width: 61.01em) and (max-width: 80em) {
     .gallery {
       grid-template-columns: repeat(2, 1fr);
